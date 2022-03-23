@@ -7,19 +7,21 @@
   - 기본값
   - static 외의 다른 position 속성값이 적용된 엘리먼트를 초기화할 때 사용
 ② relative 
-  - 상대 배치
-  - 본래의 위치애서 이동
+  - 상대 배치 : 해당 엘리먼트의 좌표를 기준으로 해당 요소를 배치
+  - 본래의 위치에서 이동
   - top, right, bottom, left로 위치 결정
   - z-index 속성으로 z축 지정
 ③ absolute
-  - 절대 배치
+  - 절대 배치 : 부모 엘리먼트의 좌표를 기준으로 해당 요소를 배치
   - top, right, bottom, left로 위치 결정
   - z-index 속성으로 z축 지정
-  - relative 속성값이 부모인 경우 중심 좌표 변경
+  - 부모의 position 속성값이 relative인 경우, 부모가 중심 좌표 변경
+  - 여러 부모의 position 속성값이 relative인 경우, 가장 가까운 부모가 중심 좌표 변경
   - 부모 엘리먼트에 relative 속성값이 없는 경우, 브라우저가 중심 좌표
   - 기본 레이아웃에서 공중으로 뜨는 현상 발생
 ④ fixed
   - 고정 배치
   - 스크롤 이동 시 영역 고정
   - position 속성값에 영향받지 않고 단독 적용
+  - z-index 속성으로 z축 지정
   - 브라우저가 중심 좌표
