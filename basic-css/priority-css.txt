@@ -1,0 +1,12 @@
+1. CSS 선택지의 우선 순위
+① !important > inline style > id selector > class selector & praise selector > type selector > *
+② CSS 선택자들의 우선 순위가 같다면 마지막에 작성한 선택자의 스타일이 적용됩니다.
+
+[참고 사항]
+- * : 전체 선택자이며 점수는 0점입니다.
+- type selector : 엘리먼트 선택자이며 점수는 1점입니다.
+- class selector : 점수는 10점입니다.
+- praise selector : 가상 클래스이며 점수는 10점입니다.
+- id selector : 점수는 100점입니다.
+- inline selector : 점수는 1000점입니다.
+- !important : 절대값(최고점)입니다.
