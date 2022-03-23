@@ -1,1 +1,1 @@
-# CSS 자료들을 공유하는 방
+Space for sharing CSS learning materials and personal projects.
