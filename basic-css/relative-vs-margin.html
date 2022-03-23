@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position:relative 속성과 margin 속성의 차이</title>
+  <style>
+    .example {
+      width:100px; 
+      height:100px;
+      border:1px solid #f00;
+      /* margin:-20px 0 0 0; margin 속성을 적용하면 레이아웃에 영향을 미침. */
+      position:relative; /* 레이아웃에 영향을 미치지 않고 해당 요소의 위치만 변경됨. */
+      top:-20px;
+    }
+  </style>
+</head>
+<body>
+ 테스트 테스트 테스트 테스트 테스트 테스트 테스트 테스트 테스트 테스트 
+ <br><br><br>
+ <div class="example">테스트</div>
+ <br><br><br>
+ 테스트 테스트 테스트 테스트 테스트 테스트 테스트 테스트 테스트 테스트 
+</body>
+</html>
