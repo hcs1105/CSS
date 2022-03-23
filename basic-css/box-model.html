@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스 모델(Box Model)</title>
+  <style>
+    .effect-box-model {
+      width : 100px;
+      height : 100px;
+      padding : 20px;
+      border : 1px solid #000; 
+      margin : 20px;
+    }
+    .noEffect-box-model {
+      width : 60px;
+      height : 60px;
+      padding : 20px;
+      border : 1px solid #f00; 
+      margin : 20px;
+    }
+    .boxSizing-effect-box-model {
+      width : 100px;
+      height : 100px;
+      padding : 20px;
+      border : 1px solid #f00; 
+      margin : 20px;
+      box-sizing: border-box; /* IE 8 이상부터 지원 */
+    }
+  </style>
+</head>
+<body>
+  <div class="effect-box-model">Box Model</div>
+  <div class="noEffect-box-model">Box Model</div>
+  <div class="boxSizing-effect-box-model">Box Model</div>
+  <ul>
+    <li>padding 속성과 border 속성은 박스 모델에 영향을 끼치지만 margin 속성은 영향을 주지 않습니다.</li>
+    <li>width 속성과 height 속성이 없다면 박스 모델에 영향받지 않습니다.</li>
+    <li>CSS3 속성인 box-sizing 속성의 값이 border-box인 경우 width 속성과 height 속성, padding 속성, border 속성의 단위가 픽셀(px)이 아니더라도 자동 계속되므로 박스 모델에 영향받지 않습니다.</li>
+  </ul>
+</body>
+</html>
