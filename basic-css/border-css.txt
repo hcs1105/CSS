@@ -1,0 +1,17 @@
+[border]
+1. 정의
+엘리먼트의 테두리를 의미합니다.
+
+2. 특징
+① 테두리의 굵기와 형태, 색상을 지정할 수 있습니다.
+② 블록 엘리먼트의 경우 모든 방향으로 안쪽 여백을, 인라인 요소는 좌우측의 바깥쪽 여백만 제공합니다.
+
+3. 표현 방식
+① border : 1px solid #fff; -> 시계(상, 우, 하, 좌) 방향으로 테두리 굵기는 1px, 형태는 solid, 색상은 흰색으로 지정
+② border-top : 1px solid #fff; -> 윗쪽 방향으로 테두리 굵기는 1px, 형태는 solid, 색상은 흰색으로 지정
+③ border-right : 1px solid #fff; -> 오른쪽 방향으로 테두리 굵기는 1px, 형태는 solid, 색상은 흰색으로 지정
+④ border-bottom : 1px solid #fff; -> 아랫쪽 방향으로 테두리 굵기는 1px, 형태는 solid, 색상은 흰색으로 지정 
+⑤ border-left : 1px solid #fff; -> 왼쪽 방향으로 테두리 굵기는 1px, 형태는 solid, 색상은 흰색으로 지정
+⑥ border-width : 1px 2px 3px 4px;
+⑦ border-style : solid double dotted dashed;
+⑧ border-color : #000 #f00 #00f #ccc;
