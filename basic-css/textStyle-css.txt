@@ -1,0 +1,116 @@
+[font-family]
+1. 정의
+폰트의 종류를 지정하는 속성
+
+2. 예시
+selector {font-family:dotum;}
+
+3. 참고 사항
+  - 운영 체제(OS)에서 기본적으로 제공되는 한글 서체 : 돋음, 굴림
+  - 운영 체제(OS)에서 기본적으로 제공되는 영문 서체 : verdana, tahoma, arial
+
+[font-size]
+1. 정의
+폰트의 크기를 지정하는 속성
+
+2. 단위 
+px, em, rem, pt, %, ...
+
+3. 예시
+selector {font-size:12px;}
+
+4. 참고 사항
+  - 과거에는 폰트 크기가 11px 혹은 12px이지만 웹접근성 때문에 요즘은 14px 이상입니다.
+
+[font-weight]
+1. 정의
+폰트의 굵기를 지정하는 속성
+
+2. 종류
+normal, bold, 100, 200, 300, ...
+
+3. 예시
+selector {font-weight:bold;}
+
+4. 참고 사항
+  - th, strong, b, h1~h6 엘리먼트들은 기본적으로 굵은 서체를 지원합니다.
+
+[text-align]
+1. 정의
+텍스트 및 인라인(inline) 엘리먼트, 인라인 블록(inline-block) 엘리먼트의 가로 정렬를 지정하는 속성
+
+2. 종류
+left, center, right, justify
+
+3. 예시
+selector {text-align:center;}
+
+[vertical-align]
+1. 정의
+텍스트와 인라인(inline) 엘리먼트, 인라인(inline) 엘리먼트와 인라인(inline) 엘리먼트, 테이블 셀(cell) 내용의 세로 정렬를 지정하는 속성
+
+2. 종류
+top, middle, bottom
+
+3. 예시
+selector {font-family:dotum;}
+
+4. 참고 사항
+  - 인라인 블록(inline-block) 엘리먼트도 vertical-align 속성이 적용됩니다.
+
+[color]
+1. 정의
+텍스트의 색상을 지정하는 속성
+
+2. 종류 
+#c1c1c1, black, rgb(255,255,255)
+
+3. 예시
+selector {color:#000;}
+
+[line-height]
+1. 정의
+텍스트의 줄 간격을 지정하는 속성
+
+2. 종류 
+px, %, pt, 숫자, ...
+
+3. 예시
+selector {line-height:20px;}
+
+[text-indent]
+1. 정의
+텍스트의 들여쓰기를 지정하는 속성
+
+2. 예시
+selector {color:#000;}
+
+3. 특징
+  - 들여쓰기와 내어쓰기가 가능합니다.
+  - 기본 속성값은 0입니다.
+  - text-indent 속성은 첫 번째 줄에서만 적용됩니다.
+
+[letter-spacing]
+1. 정의
+자간(텍스트의 간격)을 지정하는 속성
+
+2. 예시
+selector {letter-spacing:-1px;}
+
+3. 특징
+  - 자간을 늘리거나 줄이는 것이 가능합니다.
+  - 기본 속성값은 0입니다.
+  - 속성값은 0에서 1 사이의 수가 가장 적절합니다.
+
+[text-decoration]
+1. 정의
+텍스트의 꾸밍을 지정하는 속성
+
+2. 종류 
+underline, overline, line-through, none
+
+3. 예시
+selector {text-decoration:underline;}
+
+4. 특징
+  - 기본 속성값은 none입니다.
