@@ -1,0 +1,69 @@
+[selector]
+1. div div
+  - div 엘리먼트의 자손 엘리먼트가 div
+  - 예시 : <div>
+            <div></div>
+          </div>
+
+2. div.selector
+  - div 엘리먼트의 클래스 이름이 selector
+  - 예시 : <div class="selector"></div>
+
+3. div .selector
+  - div 엘리먼트의 자손 앨리먼트가 존재할 때, 자손 엘리먼트의 클래스 이름이 selector
+  - 예시 : <div>
+            <p class="selector"></p>
+          </div>
+
+4. div#selector
+  - div 엘리먼트의 아이디 이름이 selector
+  - 예시 : <div id="selector"></div>
+
+5. div #selector
+  - div 엘리먼트의 자손 엘리먼트가 존재할 때, 자손 엘리먼트의 아이디 이름이 selector
+  - 예시 : <div>
+            <p id="selector"></p>
+          </div>
+
+6. div, p
+  - div 엘리먼트와 p 엘리먼트를 함께 선택 
+  - 예시 : <div></div>
+          <p></p>
+
+7. div.selector p#selector
+  - div 엘리먼트의 클래스 이름이 selector이며 자손인 p 엘리먼트의 아이디 이름이 selector 
+  - 예시 : <div class="selector">
+            <p id="selector"></p>
+          </div>
+
+8. div + div
+  - div 엘리먼트의 형제가 div 엘리먼트
+  - 예시 : <div></div>
+          <div></div>
+
+9. div > div
+  - div 엘리먼트의 자식 엘리먼트가 div
+  - 예시 : <div>
+            <div></div>
+          </div>
+
+10. input[type="text"]
+  - input 엘리먼트의 type 속성값이 text인 경우 선택
+  - 예시 : <input type="text">
+
+11. a:hover
+  - a 엘리먼트에 마우스를 올릴 때
+
+12. a:active
+  - a 엘리먼트를 마우스로 눌렀을 때
+
+13. a:focus
+  - 키보드로 a 엘리먼트에 접근할 때
+
+14. div div:first-child
+  - div 엘리먼트의 첫 번째 자손 엘리먼트를 선택할 때
+  - 예시 : <div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
