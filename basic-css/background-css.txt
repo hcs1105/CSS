@@ -1,0 +1,51 @@
+[background-image]
+1. 정의
+배경 이미지를 지정하는 속성
+
+2. 예시
+selector {background-image:url(경로);}
+
+[background-repeat]
+1. 정의
+배경 이미지의 반복 처리를 지정하는 속성
+
+2. 속성값
+repeat(영역 전체에 배경 이미지 반복), no-repeat, repeat-x(가로 축 방향으로 이미지 반복), repeat-y(세로 축 방향으로 이미지 반복)
+
+3. 예시
+selector {background-repeat:no-repeat;}
+
+4. 특징
+  - 기본 속성값은 repeat입니다.
+
+[background-color]
+1. 정의
+배경 색상을 지정하는 속성
+
+2. 속성값
+#c1c1c1, black, rgb(255,255,255), transparent
+
+3. 예시
+selector {background-color:#fff;}
+
+4. 특징
+  - 배경 이미지가 있는 상태에서 배경 색상을 지정할 수 있습니다.
+  - 배경 색상의 투명도를 rgba() 속성으로 지정할 수 있습니다.
+
+[background-position]
+1. 정의
+배경 이미지의 위치를 지정하는 속성
+
+2. 종류
+left, right, top, bottom, px, %
+
+3. 예시
+selector {background-position:right top;}
+selector {background-position:10px 10px;}
+selector {background-position:10% 20%;}
+selector {background-position:right 20px;}
+selector {background-position:30% 20px;}
+selector {background-position:30% bottom;}
+
+4. 축약형
+selector {background:#fff url(경로) no-repeat right top;}
