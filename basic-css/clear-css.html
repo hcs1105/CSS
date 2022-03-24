@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>clear 속성이 적용된 사례</title>
+  <style>
+    ul {
+      list-style:none;
+    }
+    ul li {
+      float:left;
+    }
+    .clear-both {
+      clear:both;
+    }
+    .a1 {
+      border:1px solid #00f;
+      background:#f00;
+    }
+    .a1 > p {
+      padding:0;
+      border:1px solid #000;
+      margin:0;
+      float:left;
+    }
+    .br-clear {
+      clear:both;
+    }
+    .clear:after {
+      display:block;
+      clear:both;
+      content:'';
+    }
+  </style>
+</head>
+<body>
+  <!-- 'clear:both'를 적용한 방법 
+  <ul>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+  </ul>
+  <div class="clear-both">float test1</div>
+  <p>float test2</p> 
+  -->
+  <!-- br 엘리먼트를 이용한 방법  
+  <div class="a1">
+    <p>One</p>
+    <p>Two</p>
+    <br class="br-clear">
+  </div> 
+  -->
+  <!-- :after 가상 선택자를 이용한 방법 -->
+  <div class="a1 clear">
+    <p>One</p>
+    <p>Two</p>
+  </div> 
+</body>
+</html>
