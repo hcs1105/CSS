@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>outline 속성과 outline-offset 속성</title>
+  <style>
+    p {
+      margin-bottom:20px;
+    }
+    a {
+      text-decoration:none;
+    }
+
+    .outline-link-01:focus {
+      outline:2px solid #f00;
+    }
+    .outline-link-02 {
+      border:2px solid #00f;
+    }
+    .outline-link-02:focus {
+      outline:2px solid #f00;
+      outline-offset:5px;
+    }
+  </style>
+</head>
+<body>
+   <ul>
+     <li>모든 엘리먼트에 outline 속성이 적용됩니다.</li>
+     <li>border 속성과 달리 outline 속성은 개별 방향으로 값을 지정할 수 없습니다.</li>
+     <li>outline 속성은 레이아웃에 영향을 주지 않습니다.</li>
+     <li>outline-offset 속성을 사용하여 엘리먼트의 가장 자리 혹은 테두리와 외곽선의 여백을 지정할 수 있습니다.</li>
+   </ul>
+  <p>
+    <a href="#" class="outline-link-01">링크 1</a>
+  </p>
+  <p>
+    <a href="#" class="outline-link-02">링크 2</a>
+  </p>
+</body>
+</html>
