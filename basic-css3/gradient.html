@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gradient 속성</title>
+  <style>
+    .box-01 {
+      width:300px;
+      height:300px;
+      border:1px solid #f00;
+      /* background:linear-gradient(#ffc0cb, #8b00ff); */
+      /* background:linear-gradient(to right, #ffc0cb, #8b00ff); */
+      /* background:linear-gradient(to top, #ffc0cb, #8b00ff); */
+      background:linear-gradient(to top right, #ffc0cb, #8b00ff);
+    }
+  </style>
+</head>
+<body>
+  <div class="box-01"></div>
+  <ul>
+    <li>gradient 속성을 사용할 때 배경 색상과 배경 이미지를 넣을 수 없습니다.</li>
+    <li>배경 이미지의 경우, gradient 속성은 단일 배경 이미지에만 적용됩니다.</li>
+  </ul>
+</body>
+</html>
