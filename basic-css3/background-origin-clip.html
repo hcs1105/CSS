@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background-origin 속성과 background-clip 속성</title>
+  <style>
+    .bg-visual {
+      width:300px;
+      height:300px;
+      padding:10px;
+      border:10px dashed rgba(0,0,0,0.5);
+      margin-bottom:10px;
+      background:#ffc0cb url(images/bg_visual.jpg) no-repeat 0 0 / 100%; 
+      /* background-origin:padding-box; */
+      /* background-origin:border-box; */
+      background-origin:content-box;
+      /* background-clip:border-box; */
+      /* background-clip:padding-box; */
+      background-clip:content-box;
+      color:#fff;
+    }
+    .bg-visual + ul > li ~ li{
+      margin:10px 0;
+    }
+    .bg-calendar input[type="text"] {
+      width:200px;
+      height:38px;
+      padding:0 9px 0 7px;
+      border:1px solid #a9a9a9;
+      background:#f5f5f5 url(images/hcs1105_01.jpg) no-repeat right 50% / 20px;
+      background-origin:content-box;
+      box-sizing:border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-visual">Text</div>
+  <div class="bg-calendar">
+    <input type="text" value="2022-03-25">
+  </div>
+  <ul>
+    <li>
+      <strong>background-origin 속성</strong>
+      <p>배경의 원점을 엘리먼트의 어느 위치에 배치할지를 지정하는 속성입니다.</p>
+      <p>background-attachment 속성값이 'fixed'인 경우, background-origin 속성은 적용되지 않습니다</p>
+      <p>속성값들은 다음과 같습니다.</p>
+      <ul>
+        <li>border-box : 배경을 테두리에 상대적으로 배치합니다.</li>
+        <li>padding-box : 배경을 내부 여백에 상대적으로 배치합니다(기본값).</li>
+        <li>content-box : 배경을 콘텐츠에 상대적으로 배치합니다.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>background-clip 속성</strong>
+      <p>엘리먼트의 배경을 어디까지 차지할지를 지정하는 속성입니다.</p>      
+      <p>속성값들은 다음과 같습니다.</p>
+      <ul>
+        <li>border-box : 배경이 테두리의 바깥 경계까지 차지합니다(기본값).</li>
+        <li>padding-box : 배경이 내부 여백의 바깥 경계까지 차지합니다.</li>
+        <li>content-box : 배경을 콘텐츠 상자에 맞춰 표시합니다.</li>
+        <li>text : 배경을 전경 텍스트 위에만 표시합니다.</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>
