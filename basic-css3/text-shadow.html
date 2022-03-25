@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>text-shadow 속성</title>
+  <style>
+    p {
+      margin:15px 0;
+      font-size:50px;
+      font-weight:700;
+    }
+    .text-shadow-01 {
+      text-shadow:1px 2px 3px #f00;
+    }
+    .text-shadow-02 {
+      text-shadow:-2px -2px 5px rgba(0,0,0,0.43);
+      color:#00a27a;
+    }
+    .text-shadow-03 {
+      text-shadow:-5px 5px 0 #9c0000;
+      color:#00a27a;
+    }
+    .text-shadow-04 {
+      transition:all 0.5s;
+    }
+    .text-shadow-04:hover {
+      text-shadow:2px 2px 0 #f00, 4px 4px 0 #ff7500, 6px 6px #ff0, 8px 8px #008000, 10px 10px 0 #00f, 12px 12px 0 #000080, 14px 14px 0 #8b00ff;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>포토샵에서는 drop-shadow 속성으로 표현됩니다.</li>
+  </ul>
+  <p class="text-shadow-01">text-shadow</p>
+  <p class="text-shadow-02">text-shadow</p>
+  <p class="text-shadow-03">text-shadow</p>
+  <p class="text-shadow-04">text-shadow</p>
+</body>
+</html>
