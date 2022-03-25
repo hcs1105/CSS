@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>border-radius 속성</title>
+  <style>
+    body {
+      padding:50px;
+    }
+
+    .border-radius-wrap {
+      display:flex;
+      justify-content:space-between;
+    }
+    .border-radius-wrap > div {
+      width:100px;
+      height:100px;
+      background:#ffc0cb;
+    }
+    .border-radius-wrap > p {
+      width:100px;
+      height:100px;
+      background:#800080;
+    }
+    .border-radius-wrap > a {
+      width:100px;
+      height:30px;
+      border-radius:30px;
+      display:block;
+      background:#f73880;
+      text-align:center;
+      text-decoration:none;
+      color:#fff;
+      line-height:30px;
+    }
+
+    .border-radius-01 {
+      border-radius:10px; 
+    }
+    .border-radius-02 {
+      border-radius:50%; /* 원을 만들 때 */
+    }
+    .border-radius-03 {
+      border-radius:20px 10px;
+      /* 같은 표현 방식
+      border-top-left-radius:20px;
+      border-top-right-radius:10px;
+      border-bottom-right-radius:20px;
+      border-bottom-left-radius:10px;
+      */
+    }
+    .border-radius-04 {
+      border-radius:20px 10px 5px;
+      /* 같은 표현 방식
+      border-top-left-radius:20px;
+      border-top-right-radius:10px;
+      border-bottom-right-radius:5px;
+      border-bottom-left-radius:10px;
+      */
+    }
+    .border-radius-05 {
+      border-radius:10px 20px 5px 50px;
+      /* 같은 표현 방식
+      border-top-left-radius:10px;
+      border-top-right-radius:20px;
+      border-bottom-right-radius:5px;
+      border-bottom-left-radius:50px;
+      */
+    }
+    .border-radius-06 {
+      border-radius:10px 0 0 0;
+      /* 같은 표현 방식
+      border-top-left-radius:10px;
+      */
+    }
+  </style>
+</head>
+<body>
+  <p>테이블(Table) 엘리먼트를 제외하고 모든 엘리먼트에서 border-radius 속성이 적용됩니다.</p>
+  <div class="border-radius-wrap">
+    <div class="border-radius-01"></div>
+    <div class="border-radius-02"></div>
+    <div class="border-radius-03"></div>
+    <div class="border-radius-04"></div>
+    <div class="border-radius-05"></div>
+  </div>
+  <div class="border-radius-wrap">
+    <p class="border-radius-06"></p>
+    <a href="#">버튼</a>
+  </div>
+</body>
+</html>
