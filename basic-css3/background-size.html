@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background-size 속성</title>
+  <style>
+    .bg-visual {
+      width:500px;
+      height:500px;
+      border:1px solid #f00;
+      background:url(images/bg_visual.jpg) no-repeat 0 0 / contain; /* 배경 이미지의 가로와 세로 비율을 유지하면서 해당 엘리먼트에 여백이 있더라도 배경 이미지가 모두 표시됩니다. */
+      /* background:url(images/bg_visual.jpg) no-repeat 0 0 / 300px 150px; 지정된 가로와 세로의 크기에 맞추어 배경 이미지는 해당 엘리먼트에 표시됩니다. */ 
+      /* background:url(images/bg_visual.jpg) no-repeat 0 0 / 300px; 가로의 픽셀 크기가 주어진다면, 세로는 가로 크기에 비례하여 해당 엘리먼트에 배경 이미지가 표시됩니다. */ 
+      /* background:url(images/bg_visual.jpg) no-repeat 0 0 / 300px auto; 가로의 픽셀 크기가 주어진다면, 세로는 가로 크기에 비례하여 해당 엘리먼트에 배경 이미지가 표시됩니다. */ 
+      /* background:url(images/bg_visual.jpg) no-repeat 0 0 / auto 300px; 세로의 픽셀 크기가 주어진다면, 가로는 세로 크기에 비례하여 해딩 엘리먼트에 배경 이미지가 표시됩니다. */ 
+      /* background:url(images/bg_visual.jpg) no-repeat 0 0 / 100%; 해당 엘리먼트에 가로 크기를 가득 채운 상태에서, 세로는 가로 크기에 비례하여 해당 엘리먼트에 배경 이미지가 표시됩니다. */ 
+      /* background:url(images/bg_visual.jpg) no-repeat 0 0 / auto 100%; 해딩 엘리먼트에 세로 크기를 가득 채운 상태에서, 가로는 세로 크기에 비례하여 해당 엘리먼트에 배경 이미지가 표시됩니다. */ 
+      /* background:url(images/bg_visual.jpg) no-repeat 0 0 / 100% 100%; 해당 엘리먼트에 가득찬 상태로 배경 이미지가 표시됩니다. */ 
+      /* background:url(images/bg_visual.jpg) no-repeat 0 0 / cover; 배경 이미지의 가로와 세로 비율을 유지하면서 해당 엘리먼트에 가득 채운 상태로 배경 이미지가 표시됩니다. */ 
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <ll>스프라이트 기법과 IR 기법에서는 background-size 속성을 사용할 수 없습니다.</ll>
+  </ul>
+  <div class="bg-visual"></div>
+</body>
+</html>
