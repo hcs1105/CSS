@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transition 속성</title>
+  <style>
+    body {
+      padding:50px;
+    }
+    .animation-box {
+      width:100px;
+      height:100px;
+      border:1px solid #f00;
+      margin-bottom:25px;
+    }
+    .box-01 {
+      transition-property:border-radius, background;
+      transition-duration:0.5s;
+      transition-delay:1s;
+      /* transition:all 0.5s 1s; */
+    }
+    .box-01:hover {
+      border-radius:50%;
+      background:#f00;
+    }
+    .box-02 {
+      transform:translate(0,0);
+      transition-property:transform;
+      transition-duration:2s;
+      transition-delay:1s;
+      /* transition-timing-function:ease; 기본값, 부드럽게 천천히 출발하다가 빨라지면서 도착할 때 부드럽게 느려지는 현상*/
+      /* transition-timing-function:ease-in; 천천히 출발하다가 일정한 속도로 빨라지면서 도착할 때까지 그 속도를 유지하는 현상 */
+      /* transition-timing-function:ease-out; /* 빠르게 출발하다가 도착할 때 느려지는 현상. */
+      /* transition-timing-function:ease-in-out; 천천히 출발하다가 빨라지면서 도착할 때 느려지는 현상 */
+      transition-timing-function:linear; /* 처음부터 끝까지 일정한 속도를 유지하는 현상 */
+      /* transition:left 2s 1s; */
+    }
+    .box-02:hover {
+      transform:translate(500px, 0);
+    }
+    .box-03 {
+      background:#f00;
+      transition:background 2s 1s, border-radius 3s;
+    }
+    .box-03:hover {
+      border-radius: 0 20px 0 0;
+      background:#00f;
+    }
+    .box-04 {
+      width:50px;
+      height:50px;
+      background:#ffc0cb;
+      transition:all 0.5s;
+    }
+    .box-04:hover {
+      width:100px;
+      height:100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="animation-box box-01"></div>
+  <div class="animation-box box-02"></div>
+  <div class="animation-box box-03"></div>
+  <div class="animation-box box-04"></div>
+  <ul>
+    <li>transition 속성 : CSS 속성을 변경할 때 애니메이션 속도를 조절하는 기능</li>
+    <li>transition 속성은 이벤트의 시작부터 끝까지 애니메이션이 동작합니다. 그런데 animation 속성은 이벤트가 시작할 때만 애니메이션이 발생합니다.</li>
+  </ul>
+</body>
+</html>
