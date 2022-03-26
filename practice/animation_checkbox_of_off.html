@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션으로 활성화/비활성화 체크박스 구현하기</title>
+  <style>
+    body {
+      padding:30px;
+    }
+    input[type="checkbox"] {
+      position:absolute;
+      left:-3000%;
+      top:-3000%;
+    }
+    input[type="checkbox"] + label {
+      width:200px;
+      height:30px;
+      display:inline-block;
+      position:relative;
+      background:#749dff;
+      border-radius:30px;
+    }
+    input[type="checkbox"] + label:before {
+      width:28px;
+      height:28px;
+      position:absolute;
+      right:0;
+      top:0;
+      background:#16126f;
+      content:'ON';
+      border-radius:30px;
+      line-height:30px;
+      text-indent:5px;
+    }
+    input[type="checkbox"] + label:after {
+
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="checkbox1">
+  <label for="checkbox1"></label>
+</body>
+</html>
