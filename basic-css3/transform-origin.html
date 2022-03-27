@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transition-origin 속성</title>
+  <style>
+    * {
+      padding:0;
+      margin:0;
+    }
+    .transform-origin {
+      width:100px;
+      height:100px;
+      margin:100px;
+      position:relative;
+      background:#38b0b1;
+      transition:all 2s;
+      /* transform-origin:center; left:50%, top:50%, 회전할 때 중심이 축이며 기본이 center */
+      /* transform-origin:right; left:100%, top:50%, 회전할 때 오른쪽이 축임 */ 
+      /* transform-origin:top; left:50%, top:0, 회전할 때 윗쪽 가운데 영역이 축임 */ 
+      /* transform-origin:left top; left:0, top:0, 회전할 때 왼쪽 상단이 축임 */ 
+      transform-origin:10px 20px; 
+    }
+    .transform-origin:hover {
+      transform:rotate(360deg);
+      /* transform:rotateX(360deg); 가운데가 중심 축이며 상하로 움직임 */
+    }
+    .transform-origin span {
+      width:10px;
+      height:10px;
+      border-radius:100%;
+      position:absolute;
+      left:10px;
+      top:20px;
+      background:#000;
+      transform:translate(-50%, -50%);
+    }
+    a {
+      width:300px;
+      height:100px;
+      border:1px solid #000;
+      margin:100px 0 0 100px;
+      display:block;
+      position:relative;
+      font-size:30px;
+      text-align:center;
+      text-decoration:none;
+      color:#000;
+      line-height:100px;
+      transition:all 0.5s;
+    }
+    a:hover {
+      color:#fff;
+    }
+    a::before, a::after {
+      width:50%;
+      height:100%;
+      display:block;
+      position:absolute;
+      top:0;
+      z-index:-1;
+      background:#000;
+      content:'';
+      transform:scaleX(0);
+      transition:transform 0.5s;
+    }
+    a::before {
+      left:0;
+      transform-origin:left;
+    }
+    a::after {
+      right:0;
+      transform-origin:right;
+    }
+    a:hover::before, a:hover::after {
+      transform:scaleX(1);
+    }
+    a:hover::before {
+      transform-origin:right;
+    }
+    a:hover::after {
+      transform-origin:left;
+    }
+  </style>
+</head>
+<body>
+  <div class="transform-origin">
+    <span></span>
+  </div>
+  <a href="#a">Button</a>
+</body>
+</html>
