@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>:before, :nth-child, :nth-of-type 등 CSS3 기초 선택자</title>
+  <style>
+    .selector-box {
+      border:1px dashed #000;
+      margin-bottom:20px;
+    }
+    .selector-1::before {
+      content:'2';
+    }
+    .selector-1::after {
+      content:url(images/logo_ohmynews.png) '창수 짱!';
+    }
+    .selector-2 li:first-child {
+      border:1px solid #00f;
+    }
+    .selector-2 li:last-child {
+      border:1px solid #f00;
+    }
+    .selector-2 li:nth-child(2) {
+      font-weight:700;
+      color:#ad6e2e;
+    }
+    .selector-2 li:nth-child(3n+1) { /* n: 0부터 시작하는 모든 양의 정수 */
+      font-weight:700;
+      color:#111110;
+    }
+    .selector-2 li:nth-last-child(2) {
+      font-style:italic;
+      font-weight:700;
+      color:#f00;
+    }
+    .selector-2 li:nth-last-child(3n+1) {
+      font-style:italic;
+      font-weight:700;
+      color:#00f;
+    }
+    .selector-3 ul:first-of-type {
+      border:1px solid #000;
+    }
+    .selector-3 ul:last-of-type {
+      border:1px solid #00f;
+    }
+    .selector-3 ul:nth-of-type(3n+2) {
+      border:1px solid #f00;
+    }
+    .selector-3 ul:nth-last-of-type(1) {
+      font-style:italic;
+      font-weight:700;
+      color:#1ab394;
+    }
+  </style>
+</head>
+<body>
+  <strong>:before 선택자와 :after 선택자</strong>
+  <ul>
+    <li>::before 가상 엘리먼트 선택자와 ::after 가상 엘리먼트 선택자는 폼 엘리먼트와 닫는 태그가 없는 엘리먼트에 적용되지 않습니다.</li>
+    <li>::before 가상 엘리먼트 선택자와 ::after 가상 엘리먼트 선택자는 기본적으로 인라인 엘리먼트입니다.</li>
+    <li>::before 가상 엘리먼트 선택자와 ::after 가상 엘리먼트 선택자를 사용하려면 반드시 content 속성을 적어야 합니다.</li>
+  </ul>
+  <div class="selector-box selector-1">text</div>
+  <strong>:first-child 선택자와 :last-child 선택자, :nth-child() 선택자, :nth-last-child() 선택자</strong>
+  <ul class="selector-box selector-2">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+  </ul>
+  <strong>first-of-type 선택자와 nth-of-type() 선택자, last-of-type 선택자, nth-last-of-type() 선택자</strong>
+  <div class="selector-box selector-3">
+    <span>1</span>
+    <ul>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+    <p>5</p>
+    <div>6</div>
+    <ul>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+    </ul>
+    <ul>
+      <li>11</li>
+      <li>12</li>
+      <li>13</li>
+      <li>14</li>
+    </ul>
+    <dl>
+      <dt>15</dt>
+      <dd>16</dd>
+    </dl>
+    <div>17</div>
+  </div>
+</body>
+</html>
