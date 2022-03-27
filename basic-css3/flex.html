@@ -32,12 +32,6 @@
       width:20%;
       float:left;  
     }
-    .flex-layout {
-      display:flex;
-    }
-    .flex-layout li {
-      flex:1;
-    }
     .table-layout {
       width:100%;
       display:table;
@@ -45,21 +39,64 @@
       border-spacing:0;
     }
     .table-layout li {
+      width:20%;
       display:table-cell;
+    }
+    .flex-layout {
+      display:flex;
+    }
+    .flex-layout li {
+      flex:1; /* 5개의 엘리먼트가 있을 경우, 전체 너비 중에서 개별 엘리먼트의 너비는 1/5씩 차지함 */
+    }
+    .flex-layout li:first-child {
+      flex:2; /* 5개의 엘리먼트가 있을 경우, 첫 번째 엘리먼트는 다른 엘리먼트들이 자동적으로 동일하게 차지하는 너비의 2배를 얻음 */
+    }
+    .flex-layout li:nth-child(2) {
+      width:200px;
+      flex:none; /* 5개의 엘리먼트가 있을 경우, 첫 번째 엘리먼트는 다른 엘리먼트들이 자동적으로 동일하게 차지하는 너비의 2배를 얻고 2번째 엘리먼트는 200px의 너비를 차지함 */
+    }
+    .flex-example-01 {
+      display:flex;
+    }
+    .flex-example-01 li:first-child {
+      width:200px;
+      flex:none;
+    }
+    .flex-example-01 li:nth-child(2) {
+      flex:1;
+    }
+    .flex-example-01 li:nth-child(3) {
+      width:100px;
+      flex:none;
+    }
+    .flex-example-02 {
+      height:200px;
+      border:1px solid #ffc0cb;
+      margin-bottom:10px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    .flex-example-02 p {
+      width:200px;
+      height:50px;
+      border:1px solid #8b00ff;
+    }
+    .description-list {
+      padding:0;
+      border:none;
+      list-style:disc;
+    }
+    .description-list li {
+      margin-bottom:10px;
+      border:none;
     }
   </style>
 </head>
 <body>
+  <!-- 
   <strong>Float Layout</strong>
   <ul class="float-layout">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-  </ul>
-  <strong>Flex Layout</strong>
-  <ul class="flex-layout">
     <li>1</li>
     <li>2</li>
     <li>3</li>
@@ -73,6 +110,33 @@
     <li>3</li>
     <li>4</li>
     <li>5</li>
-  </ol>
+  </ol> 
+  -->
+  <strong>Flex Layout</strong>
+  <ul class="flex-layout">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+  <strong>The example of flex layout</strong>
+  <ul class="flex-example-01">
+    <li>
+      <strong>Navi</strong>
+      <p>테스트 중입니다.</p>
+      <p>테스트 중입니다.</p>
+      <p>테스트 중입니다.</p>
+    </li>
+    <li>Contents</li>
+    <li>sidebar</li>
+  </ul>
+  <div class="flex-example-02">
+    <p>테스트</p>
+  </div>
+  <ul class="description-list">
+    <li>테이블 레이아웃에서 빨간 테두리와 내부 여백이 보이지 않는 이유는 ol 엘리먼트에 적용된 padding 속성이 테이블 레이아웃에 적용되지 않기 때문입니다.</li>
+    <li>고정 &plus; 가변형 레이아웃을 구현할 때 flex 속성이 유용하게 쓰입니다.</li>
+  </ul>
 </body>
 </html>
