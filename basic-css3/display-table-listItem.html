@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>display:table 속성과 list-item 속성</title>
+  <style>
+    body {
+      padding:50px;
+    }
+    table {
+      border:1px solid #f00;
+      margin-bottom:10px;
+    }
+    th, td {
+      border:1px solid #00f;
+    }
+    ul {
+      border:1px solid #f00;
+    }
+    li {
+      border:1px solid #00f;
+    }
+    /* table 요소를 ul 요소로 만들기 */
+    table {
+      display:block;
+      list-style:none;
+    }
+    table th, table td {
+      display:list-item;
+    }
+    /* ul 요소를 table 요소로 만들기 */
+    div {
+      width:100%;
+      padding:0;
+      border-collapse:collapse;
+      margin:0;
+      display:table;
+    }
+    ul {
+      display:table-row;
+    }
+    li {
+      height:100px;
+      padding:0;
+      margin:0;
+      display:table-cell;
+      vertical-align:middle;
+    }
+  </style>
+</head>
+<body>
+  <strong>table 요소를 ul 요소로 만들기</strong>
+  <table>
+    <thead>
+      <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+    </tbody>
+  </table>
+  <strong>ul 요소를 table 요소로 만들기</strong>
+  <div>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <ul>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+    </ul>
+  </div>
+</body>
+</html>
