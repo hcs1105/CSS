@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>:checked, :empty, :target, :not 등 CSS3 기초 선택자</title>
+  <style>
+    .selector-box {
+      margin:10px 0 20px;
+      border:1px dashed #000;
+    }
+    .checkbox-area input[type='checkbox'] {
+      position:absolute;
+      left:-3000em;
+    } 
+    .checkbox-area input[type='checkbox'] + label::before {
+      width:10px;
+      height:10px;
+      line-height:10px;
+      display:inline-block;
+      border:1px solid #ccc;
+      vertical-align:middle;
+      color:transparent;
+      content:'v';
+    } 
+    .checkbox-area input[type='checkbox']:checked + label::before {
+      color:#00f;
+    }
+    .radio-area input[type="radio"] {
+      position:absolute;
+      left:-3000em;
+    }
+    .radio-area input[type="radio"] + label {
+      padding-left:23px;
+      background:url(images/check_off.svg) no-repeat 0 0;
+    }
+    .radio-area input[type="radio"]:checked + label {
+      background-image:url(images/check_on.svg);
+    }
+    table td:empty{
+      background:#ccc;
+    }
+    .target-area div {
+      display:none;
+    }
+    .target-area div:target {
+      display:block;
+    }
+    .not-p span:not(.aa) {
+      color:#f00;
+    }
+  </style>
+</head>
+<body>
+  <strong>체크박스에 적용된 :checked 가상 클래스 선택자</strong>
+  <div class="selector-box checkbox-area">
+    <input type="checkbox" id="a1">
+    <label for="a1">체크하기 1</label>
+    <input type="checkbox" id="a2">
+    <label for="a2">체크하기 2</label>
+  </div>
+  <strong>라디오 버튼에 적용된 :checked 가상 클래스 선택자</strong>
+  <div class="selector-box radio-area">
+    <input type="radio" name="aa" id="a3">
+    <label for="a3">체크하기 3</label>
+    <input type="radio" name="aa" id="a4">
+    <label for="a4">체크하기 4</label>
+  </div>
+  <strong>달력에 적용된 :empty 가상 클래스 선택자</strong>
+  <div class="selector-box">
+    <table border="1">
+      <thead>
+        <tr>
+          <th>일</th>
+          <th>월</th>
+          <th>화</th>
+          <th>수</th>
+          <th>목</th>
+          <th>금</th>
+          <th>토</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <td>29</td>
+          <td>30</td>
+          <td>31</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <strong>탭 영역에 적용된 :target 가상 클래스 선택자</strong>
+  <div class="selector-box target-area">
+    <a href="#target-1">탭1</a>
+    <a href="#target-2">탭2</a>
+    <a href="#target-3">탭3</a>
+    <div id="target-1">내용 1</div>
+    <div id="target-2">내용 2</div>
+    <div id="target-3">내용 3</div>
+  </div>
+  <strong>선택되지 않는 엘리먼트에 스타일이 적용된 :not 가상 클래스 선택자</strong>
+  <div class="selector-box">
+    <p class="not-p">
+      <span>a</span>
+      <span class="aa">b</span>
+      <span>c</span>
+      <span>d</span>
+    </p>
+  </div>
+</body>
+</html>
+ 
