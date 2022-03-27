@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transform 속성</title>
+  <style>
+    body {
+      padding:30px;
+    }
+    .transform-box {
+      width:100px;
+      height:100px;
+      margin-bottom:30px;
+      border:1px solid #f00;
+    }
+    .box-01 {
+      transform:rotate(0deg);
+      transition:all 0.5s;
+    }
+    .box-01:hover {
+      /* transform:rotate(90deg); */
+      /* transform:rotateX(180deg); rotateX() : 가로축을 기준으로 상하 회전 */
+      transform:rotateY(180deg); /* rotateY() : 세로축을 기준으로 좌우 회전 */
+    }
+    .box-02 {
+      transform:scale(1);
+      transition:all 0.5s;
+    }
+    .box-02:hover {
+      /* transform:scale(0.5); */
+      /* transform:scaleX(1.5); */
+      transform:scaleY(1.5);
+      transition:all 0.5s;
+    }
+    .box-03 {
+      transform:skew(0deg);
+    }
+    .box-03:hover {
+      /* transform:skew(30deg, 10deg); */
+      /* transform:skewX(30deg); skewX() : 가로축을 기준으로 좌우 경사 변형 */
+      transform:skewY(10deg); /* skewY() : 가로축을 기준으로 상하 경사 변형 */
+    }
+    .box-04 {
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="transform-box box-01">rotate 속성값</div>
+  <div class="transform-box box-02">scale 속성값</div>
+  <div class="transform-box box-03">skew 속성값</div>
+  <div class="transform-box box-04">transform 속성값</div>
+</body>
+</html>
