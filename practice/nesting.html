@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Nesting</title>
+  <style>
+	.demo * {
+		padding:10px;
+	}
+
+	.demo .sm {
+		border:1px solid #f00;
+	}
+
+	.demo {
+		& .blue {
+			background: #f0e68c;
+		}
+	}
+  </style>
+</head>
+<body>
+  <div class="demo red">
+    <div class="sm triangle pink">1</div>
+    <div class="sm triangle blue">2</div>
+    <div class="square">
+			3
+			<span class="blue">3-1</span>
+		</div>
+    <div class="sm square pink">4</div>
+    <div class="sm square blue">5</div>
+    <div class="circle pink">6</div>
+  </div>
+</body>
+</html>
