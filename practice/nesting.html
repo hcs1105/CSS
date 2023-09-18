@@ -5,8 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Nesting</title>
   <style>
+	.logo {
+		:is(header) & {
+			border: 1px solid #f00;
+		}
+		:is(footer) & {
+			border: 1px solid #00f;
+		}
+	}	
+
 	.demo * {
 		padding:10px;
+		& span {
+			font-style:italic;
+			color:#f00;
+		}
 	}
 
 	.demo .sm {
@@ -17,10 +30,39 @@
 		& .blue {
 			background: #f0e68c;
 		}
+		:is(.triangle, .circle){
+			font-weight:700;
+			color:#00f;
+		}
+		& :not(p) {
+			background:#b8860b;
+		}
+		& p {
+			margin:0;
+		}
+		/*
+		 * @media - https://caniuse.com/?search=%40media
+		 */
+		@media(width <= 1024px) {
+			font-size:1.25rem;
+		}
+	}
+
+	.sm {
+		.demo & {
+			background:#87ceeb;
+		}
 	}
   </style>
 </head>
 <body>
+	<header>
+		<img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" class="logo" alt="daum">
+	</header>
+	<!-- 
+		* CSS Nesting - https://developer.chrome.com/articles/css-nesting/
+		* CSS Nesting - https://caniuse.com/?search=CSS%20Nesting
+	 -->
   <div class="demo red">
     <div class="sm triangle pink">1</div>
     <div class="sm triangle blue">2</div>
@@ -29,8 +71,11 @@
 			<span class="blue">3-1</span>
 		</div>
     <div class="sm square pink">4</div>
-    <div class="sm square blue">5</div>
+    <p class="sm square blue">5</p>
     <div class="circle pink">6</div>
   </div>
+	<footer>
+		<img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" class="logo" alt="daum">
+	</footer>
 </body>
 </html>
