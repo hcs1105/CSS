@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>placeholder 속성값의 특정 문자열에 다른 색상 적용하기</title>
+	<!-- CSS pseudo-class(:placeholder-shown) - https://caniuse.com/css-placeholder-shown -->
+	<style>
+	.test_form {
+		& p { 
+			position:relative;
+			font-size:12px;
+			font-family:arial, helvetica, sans-serif;
+			& > textarea:placeholder-shown + label {
+				text-indent:0;
+			} 
+			& > label {
+				position:absolute;
+  			left:3px;
+  			top:3px;
+				text-indent:-9999em;
+				& .highlight_text {
+					color:#f00;
+				}
+			}
+		}
+	}
+	</style>
+</head>
+<body>
+  <form name="" id="" class="test_form" method="post" action="">
+		<fieldset>
+			<legend>리베하얀님! 최고</legend>
+			<p>
+				<textarea id="rebehayan_zzang" placeholder=""></textarea>
+				<label for="rebehayan_zzang">
+					<span class="highlight_text">블랙</span>프라이데이
+				</label>
+			</p>
+		</fieldset>
+	</form>
+</body>
+</html>
